@@ -1,0 +1,242 @@
+/* ==CSS== */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+  
+}
+li{
+  font-size:1.5rem ;
+}
+h1{
+  font-size: 2.5rem;
+}
+h2{
+  font-size: 2.2rem;
+}
+h3{
+  font-size: 1.8rem;
+}
+a{
+  color:black;
+  text-decoration: none;
+}
+
+/* ==HEADER */
+header {
+  min-height: 6vh;
+  background-color:rgba(85, 72, 45, 0.356);
+  padding: 0.2rem 1rem;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.logo{
+  flex: 1 1 20rem;
+  margin: auto;
+  font-family: cursive;
+}
+nav {
+  flex: 1;
+  font-family:'Big Shoulders Display', cursive;
+  /* margin: auto; */
+}
+
+  nav ul{
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+}
+
+
+
+/* ==Main section=== */
+.main{
+  min-height: 60vh;
+  width: 100%;
+  padding: 2rem 3rem;
+  margin: auto;
+  /* padding: 1rem; */
+  background: linear-gradient(rgba(161, 147, 147, 0.5),transparent),url("./images/top_bg.jpg") no-repeat fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* .accounts{
+flex: 1 1 1 10rem;
+} */
+.accounts{
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  align-items: center;
+  
+  /* margin: auto; */
+}
+.account-title{
+  font-family:'Big Shoulders Display', cursive;
+}
+.account-info{
+  width: 100%;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 2px solid rgb(34, 62, 75);
+  background-color: lightblue;
+  
+}
+.label{
+  background-color: lightgray;
+  /* margin:0.5rem; */
+  
+}
+
+
+.deposit-wrapper{
+  /* flex: 1 1 1 40rem; */
+  align-self: start;
+  /* background-color: lightblue; */
+  width: 20%;
+  justify-content: center;
+  margin: 0rem 1rem;
+}
+.deposit-header{
+  text-align: center;
+  background-color: lightblue;
+  border: 2px solid rgb(34, 62, 75);
+  padding: 1rem 0;
+  font-family:'Big Shoulders Display', cursive;
+}
+.deposit-field{
+
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+#input-deposit{
+  width: 60%;
+  padding: 0.5rem 0.2rem;
+  }
+
+.btn-deposit{
+  width: 30%;
+  background-color: rebeccapurple;
+  color: white;
+  cursor: pointer;
+  transition: background 0.5s ease-in-out;
+  transition: font-size 0.5s ease-in-out;
+
+}
+.btn-deposit:hover{
+  background: rgb(25, 33, 146);
+  font-size: 1.7rem;
+}
+.transfer-wrapper{
+  /* flex: 1 1 1 40rem; */
+  background-color: lightblue;
+  border: 2px solid rgb(34, 62, 75);
+  align-items: center;
+  width: 25%;
+}
+.transfer-header{
+  text-align: center;
+  margin: 1rem;
+  font-family:'Big Shoulders Display', cursive;
+}
+.transfer-table{
+  width: 100%;
+  margin: auto;
+  padding: 1rem;
+  
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.transfer-account{
+  margin-bottom: 0.3rem;
+  border: 2px solid rgb(34, 62, 75);
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem;
+}
+.transfer-account h2{
+  width: 40%;
+  text-align: center;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.amount h2{
+  font-size: 1.2rem;
+}
+#from,
+#to,
+.input-transfer{
+ width: 60%;
+}
+.btn-transfer{
+  padding: 0.5rem;
+  width: 70%;
+  background-color: rebeccapurple;
+  color: white;
+  margin: auto;
+  cursor: pointer;
+}
+
+/* ===Transactions */
+.transactions-wrapper{
+  min-height: 34vh;
+  border-top: 2px solid rgb(34, 62, 75);
+  background-color:rgba(163, 155, 140, 0.356);
+  /* padding: 1rem; */
+}
+.transactions-header{
+  padding: 0.8rem;
+  text-align: center;
+  background-color:rgba(121, 109, 87, 0.356);
+  font-family:'Big Shoulders Display', cursive;
+}
+.transactions{
+  padding: 0.5rem 1rem;
+  display: flex;
+}
+.table{
+  flex:1 1;
+}
+.transaction-title{
+  text-align: center;
+  font-family:'Big Shoulders Display', cursive;
+}
+.table-debit{
+  border-right: rgba(41, 39, 35);
+}
+
+
+@media screen and (max-width:780px) {
+  html{
+    font-size:50%
+    }
+ }
+ @media screen and (max-width:672px) {
+    /* .logo{
+      text-align: center;
+      font-size: 1.8rem;
+    } */
+
+ }
+
+@media screen and (max-width:570px) {
+  html{
+    font-size:40%
+    }
+}
