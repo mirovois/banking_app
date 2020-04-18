@@ -1,40 +1,83 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Banking app</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <header>
-      <p>
-        <h1>Online banking</h1>
-      </p>
-    </header>
-    <div class="main-page">
-    <div class="top">
-      <div class="deposit">
-        <div class="add_container">
-        <input type="number" class="add_value" placeholder="Make a deposit">
-        <button class="add_btn">OK</button>
-        </div>
-        </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="style.css">
+  <title>Banking Application</title>
+</head>
+<body>
+  <header>
+    <h1 class = "logo">Banking within a click</h1>
+    <nav>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Main</a></li>
+        <li><a href="#">Contacts</a></li>      
+      </ul>
+    </nav>
+    <i class="fas fa-money-check-alt"></i>
+  </header>
+  <section class="main">
+    <div class = "accounts">
+      <div class = "account-info checking">
+        <h2 class = "account-title">Checking account</h2>
+        <h3 class = "label chk-value">$200</h3>
+      </div>
+      <div class = "account-info credit">
+        <h2 class = "account-title">Credit account</h2>
+        <h3 class = "label crd-value">$100</h3>
+      </div>
     </div>
-    <div class="main">
-      <div class="inside-left">
-      <div class="checking">
-        <h2>checking account</h2>
-          <span class="dollar-char">$</span><div class="item-value">value</div>
 
+    <div class = "deposit-wrapper">
+      <h1 class = "deposit-header">Make deposit</h1>
+      <div class = "deposit-field">
+        <input type="text" id = "input-deposit" placeholder="amount">
+        <button class = "btn-deposit">OK</button>
       </div>
-      <div class="credit">
-        <h2>credit account</h2>
-          <span class="dollar-char">$</span><div class="item-value">value</div>
-      </div>
-      </div>
-      <div class="inside-right">Transfer section</div>
+      
     </div>
+
+    <div class = "transfer-wrapper">
+      <h1 class = transfer-header>Quick transfer</h1>
+      <div class = "transfer-table">
+        <div class = "transfer-account sender">
+          <h2>from</h2>
+          <select name="from-account" id="from">
+            <option value="chk" selected>Checking</option>
+            <option value="crd">Credit</option>
+        </select>
+        </div>
+        <div class = "transfer-account receiver">
+          <h2>to</h2>
+          <select name="0-account" id="to">
+            <option value="crd" selected>Credit</option>
+            <option value="chk">Checking</option>
+        </select>
+        </div>
+        <div class = "transfer-account amount">
+          <h2>amount</h2>
+          <input type="text" class = "input-transfer">
+        </div>
+        <button class = "btn-transfer">OK</button>
+      </div>
     </div>
-    <script src="script.js"></script>
-  </body>
+  </section>
+
+  <section class = "transactions-wrapper">
+    <h1 class = "transactions-header">List of Transactions</h1>
+    <div class = "transactions">
+      <div class="table table-debit">
+        <h2 class = "transaction-title">Debit</h2>
+      </div>
+      <div class="table credit">
+        <h2 class = "transaction-title">Credit</h2>
+      </div>
+    </div>
+  </section>
+  
+  
+</body>
 </html>
