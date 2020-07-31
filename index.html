@@ -23,18 +23,18 @@
     <div class = "accounts">
       <div class = "account-info checking">
         <h2 class = "account-title">Checking account</h2>
-        <h3 class = "label chk-value">$200</h3>
+        <h3 class = "label chk-value">$0</h3>
       </div>
       <div class = "account-info credit">
         <h2 class = "account-title">Credit account</h2>
-        <h3 class = "label crd-value">$100</h3>
+        <h3 class = "label crd-value">$0</h3>
       </div>
     </div>
 
     <div class = "deposit-wrapper">
       <h1 class = "deposit-header">Make deposit</h1>
       <div class = "deposit-field">
-        <input type="text" id = "input-deposit" placeholder="amount">
+        <input type="text" class = "input-deposit" placeholder="amount">
         <button class = "btn-deposit">OK</button>
       </div>
       
@@ -46,20 +46,22 @@
         <div class = "transfer-account sender">
           <h2>from</h2>
           <select name="from-account" id="from">
-            <option value="chk" selected>Checking</option>
+            <option disabled value="select" selected>-select account-</option>
+            <option value="chk">Checking</option>
             <option value="crd">Credit</option>
         </select>
         </div>
         <div class = "transfer-account receiver">
           <h2>to</h2>
-          <select name="0-account" id="to">
-            <option value="crd" selected>Credit</option>
+          <select defaulValue = "select"  name="0-account" id="to">
+            <option disabled value="select" selected>-select account-</option>
+            <option value="crd" >Credit</option>
             <option value="chk">Checking</option>
         </select>
         </div>
         <div class = "transfer-account amount">
           <h2>amount</h2>
-          <input type="text" class = "input-transfer">
+          <input type="number" class = "input-transfer">
         </div>
         <button class = "btn-transfer">OK</button>
       </div>
@@ -69,15 +71,39 @@
   <section class = "transactions-wrapper">
     <h1 class = "transactions-header">List of Transactions</h1>
     <div class = "transactions">
-      <div class="table table-debit">
-        <h2 class = "transaction-title">Debit</h2>
+      <div class = "trans-title">
+        <h2 class = "debit-title">Debit</h2>
+        <h2 class = "credit-title">Credit</h2>
       </div>
-      <div class="table credit">
-        <h2 class = "transaction-title">Credit</h2>
-      </div>
-    </div>
+        <div class = "trans-wrapper">
+          <div class = "debit-list">
+            <!-- <div class = "debit-trans trans" id = debit-0>
+              <h3 class = "trans-item">$100 was transfered from checking to credit account </h3>
+              <button class = "btn-delete">
+                <img   src="./images/iconmonstr-x-mark-5.svg" alt="delete button">
+              </button>
+            </div>
+            <div class = "debit-trans" id = debit-1>
+              <h3 class = "trans-item">$100 was transfered from checking to credit account </h3>
+              <button class = "btn-delete">
+                <img   src="./images/iconmonstr-x-mark-5.svg" alt="delete button">
+              </button>
+            </div> -->
+            
+          </div>
+          <div class = "credit-list">
+            <!-- <div class = "credit-trans trans" id = "credit-1">
+              <h3 class = "trans-item">$100 was transfered from credit to checking account </h3>
+              <button class = "btn-delete">
+                <img   src="./images/iconmonstr-x-mark-5.svg" alt="delete button">
+              </button>
+            </div> -->
+          </div>
+
+        </div>  
+     </div>
   </section>
   
-  
+  <script src = "script.js"></script>
 </body>
 </html>

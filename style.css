@@ -123,7 +123,7 @@ flex: 1 1 1 10rem;
   justify-content: space-between;
   margin-top: 2rem;
 }
-#input-deposit{
+.input-deposit{
   width: 60%;
   padding: 0.5rem 0.2rem;
   }
@@ -209,13 +209,52 @@ flex: 1 1 1 10rem;
 .transactions{
   padding: 0.5rem 1rem;
   display: flex;
+  flex-direction: column;
 }
 .table{
   flex:1 1;
 }
-.transaction-title{
+.trans-title{
   text-align: center;
   font-family:'Big Shoulders Display', cursive;
+  /* display: flex; */
+}
+.credit-title{
+  display:none;
+  width: 50%;
+  float: right;
+}
+.debit-title{
+  display:none;
+  width: 50%;
+  float: left;
+}
+
+.show{
+  display:block;
+}
+
+.trans-wrapper{
+  display: flex;
+  text-align: center;
+  font-family:'Big Shoulders Display', cursive;
+}
+.debit-list,
+.credit-list{
+  width: 50%;
+  margin: 1rem auto;
+}
+.debit-trans,
+.credit-trans{
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+.btn-delete{
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 .table-debit{
   border-right: rgba(41, 39, 35);
